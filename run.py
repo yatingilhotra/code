@@ -1,5 +1,5 @@
 from layer import EchoLayer
-from yowsup.layers.axolotl		       import YouAxolotlLayer 	
+
 from yowsup.layers.auth                        import YowAuthenticationProtocolLayer
 from yowsup.layers.protocol_messages           import YowMessagesProtocolLayer
 from yowsup.layers.protocol_receipts           import YowReceiptProtocolLayer
@@ -20,7 +20,7 @@ CREDENTIALS = ("91xxxxxxxxxx", "AUPmtbvqyM8xxxxxxxxxxxxxx=") # replace with your
 if __name__==  "__main__":
     layers = (
         EchoLayer,
-        (YowAuthenticationProtocolLayer, YowMessagesProtocolLayer, YowReceiptProtocolLayer, YowAckProtocolLayer, YouAxolotLayer)
+        (YowAuthenticationProtocolLayer, YowMessagesProtocolLayer, YowReceiptProtocolLayer, YowAckProtocolLayer)
     ) + YOWSUP_CORE_LAYERS
 
     stack = YowStack(layers)
